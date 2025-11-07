@@ -9,7 +9,6 @@ public class SauceDemoConstants {
     public static final String LOGIN_BUTTON = "name:login-button";
     public static final String CHECKOUT_BUTTON = "name:checkout";
     public static final String ERROR_MESSAGE = "xpath:/html/body/div/div/div[2]/div[1]/div/div/form/div[3]/h3";
-    public static final String STATS_ID = "id:root";
     public static final String INVENTORY_TITLE = "xpath:/html/body/div[1]/div/div/div[1]/div[2]/span";
     public static final String ADD_BUTTON_BACKPACK = "id:add-to-cart-sauce-labs-backpack";
     public static final String BACKPACK_PRICE = "xpath:/html/body/div[1]/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/div";
@@ -24,6 +23,5 @@ public class SauceDemoConstants {
     public static final String TSHIRT_FINAL_PRICE = "xpath:/html/body/div/div/div/div[2]/div/div[1]/div[3]/div[2]/div[2]/div";
     public static final String ITEM_FINAL_PRICE_BY_NAME_XPATH = "xpath://div[@class='inventory_item_name' and text()='%s']/following-sibling::div[@class='inventory_item_price']";
     public static final String FINISH_BUTTON = "name:finish";
-
 
 }

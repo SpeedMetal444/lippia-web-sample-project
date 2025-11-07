@@ -5,21 +5,16 @@ import io.cucumber.java.en.*;
 import lippia.web.services.SauceDemoLoginService;
 import org.testng.Assert;
 
-public class SauceDemoSteps extends PageSteps {
+public class SauceDemoLoginSteps extends PageSteps {
 
     @Given("^The client is on SauceDemo page$")
     public void home() {
-        SauceDemoLoginService.navegarWeb();
+        SauceDemoLoginService.navigateWeb();
     }
 
     @Given("^The client logs in with user (.*) and password (.*)$")
     public void loginWithParameters(String user, String password) {
         SauceDemoLoginService.enterUsernameAndPassword(user, password);
-    }
-
-    @Given("^The client is on SauceDemo inventory page$")
-    public void inventoryPage() {
-        SauceDemoLoginService.navegarWeb();
     }
 
     @When("The client use a correct password")

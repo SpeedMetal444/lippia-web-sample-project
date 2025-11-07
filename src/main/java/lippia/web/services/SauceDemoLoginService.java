@@ -31,7 +31,7 @@ public class SauceDemoLoginService extends ActionManager {
     }
 
     public static boolean loginSuccess() {
-        return isVisible(ADD_BUTTON);
+        return isVisible(INVENTORY_TITLE);
     }
 
     public static String getErrorMessage() {

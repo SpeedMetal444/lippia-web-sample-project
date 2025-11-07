@@ -18,4 +18,11 @@ public class SauceDemoConstants {
     public static final String REMOVE_BUTTON_BACKPACK = "id:remove-sauce-labs-backpack";
     public static final String CART_BADGE_COUNT = "xpath:/html/body/div/div/div/div[1]/div[1]/div[3]/a/span";
     public static final String CART_LINK = "xpath:/html/body/div/div/div/div[1]/div[1]/div[3]/a}";
+    public static final String CONTINUE_CHECKOUT_BUTTON = "name:continue";
+    public static final String BACKPACK_FINAL_PRICE = "xpath:/html/body/div/div/div/div[2]/div/div[1]/div[4]/div[2]/div[2]/div";
+    public static final String TSHIRT_FINAL_PRICE = "xpath:/html/body/div/div/div/div[2]/div/div[1]/div[3]/div[2]/div[2]/div";
+    public static final String ITEM_FINAL_PRICE_BY_NAME_XPATH = "xpath://div[@class='inventory_item_name' and text()='%s']/following-sibling::div[@class='inventory_item_price']";
+    public static final String FINISH_BUTTON = "name:finish";
+
+
 }

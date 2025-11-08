@@ -1,5 +1,8 @@
 @SauceDemoLogin
-Feature: As a potential client i need to log in in saucedemo to use the site
+Feature: Log in to the SauceDemo page
+  As a potential client
+  I want to log in in SauceDemo
+  To use the site
 
   Background:
     Given The client is on SauceDemo page

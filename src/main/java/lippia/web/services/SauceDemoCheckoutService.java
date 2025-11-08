@@ -2,7 +2,6 @@ package lippia.web.services;
 
 import com.crowdar.core.actions.ActionManager;
 import org.testng.Assert;
-import static com.crowdar.core.actions.WebActionManager.getText;
 import static lippia.web.constants.SauceDemoConstants.*;
 
 public class SauceDemoCheckoutService extends ActionManager {

@@ -1,7 +1,8 @@
 package lippia.web.services;
 
 import com.crowdar.core.actions.ActionManager;
-import static com.crowdar.core.actions.WebActionManager.getText;
+import lippia.web.constants.SauceDemoConstants;
+
 import static lippia.web.constants.SauceDemoConstants.*;
 
 public class SauceDemoInventoryService extends ActionManager {
@@ -51,6 +52,14 @@ public class SauceDemoInventoryService extends ActionManager {
 
     public static void goToCart() {
         click(CART_LINK);
+    }
+
+    public static boolean isCartBadgeVisible() {
+        try {
+            return isVisible(SauceDemoConstants.CART_BADGE_COUNT);
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
     }
 }
 

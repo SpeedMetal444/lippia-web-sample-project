@@ -1,8 +1,8 @@
-@SauceDemoLogin
+@SauceDemoLogin @SauceDemo
 Feature: Log in to the SauceDemo page
   As a potential client
   I want to log in in SauceDemo
-  To use the site
+  So that I can use the site
 
   Background:
     Given The client is on SauceDemo page

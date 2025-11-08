@@ -1,4 +1,4 @@
-@SauceDemoInventory
+@SauceDemoInventory @SauceDemo
 Feature: Manage items in the cart from the inventory page
   As a client on SauceDemo
   I want to add and remove products from the cart

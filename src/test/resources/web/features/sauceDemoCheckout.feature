@@ -1,4 +1,4 @@
-@SauceDemoCheckout
+@SauceDemoCheckout @SauceDemo
 Feature: Complete Purchase and Validate Checkout Data
   As a SauceDemo customer
   I want to add two different products to the cart and complete the checkout process

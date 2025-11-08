@@ -18,32 +18,32 @@ public class SauceDemoLoginSteps extends PageSteps {
         SauceDemoLoginService.enterUsernameAndPassword(user, password);
     }
 
-    @When("The client use a correct password")
+    @When("^The client use a correct password$")
     public void theClientUseACorrectPassword() {
         SauceDemoLoginService.enterPassword("secret_sauce");
     }
 
-    @When("The client use a correct user")
+    @When("^The client use a correct user$")
     public void theClientUseACorrectUser() {
         SauceDemoLoginService.enterUsername("standard_user");
     }
 
-    @When("The client clicks on the Login button")
+    @When("^The client clicks on the Login button$")
     public void theClientClicksOnTheLoginButton() {
         SauceDemoLoginService.clickLogin();
     }
 
-    @When("The client use an incorrect user")
+    @When("^The client use an incorrect user$")
     public void theClientUseAnIncorrectUser() {
         SauceDemoLoginService.enterUsername("locked_out_user");
     }
 
-    @Then("The client verify that he logs in correctly")
+    @Then("^The client verify that he logs in correctly$")
     public void theClientVerifyThatHeLogsInCorrectly() {
         Assert.assertTrue(SauceDemoLoginService.loginSuccess());
     }
 
-    @Then("The client can read an error message")
+    @Then("^The client can read an error message$")
     public void theClientCanReadAnErrorMessage() {
         String expectedMessage = "Epic sadface: Sorry, this user has been locked out.";
         Assert.assertEquals(SauceDemoLoginService.getErrorMessage(), expectedMessage);

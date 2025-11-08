@@ -24,7 +24,7 @@ public class GoogleSearchSteps extends PageSteps {
         GoogleHomeService.clickSearchButton();
     }
 
-    @Then("The client verify that results are shown properly")
+    @Then("^The client verify that results are shown properly$")
     public void statVerification() {
         GoogleSearchResultService.verifyResults();
     }

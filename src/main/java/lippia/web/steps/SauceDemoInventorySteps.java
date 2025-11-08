@@ -7,14 +7,14 @@ import lippia.web.services.SauceDemoInventoryService;
 
 public class SauceDemoInventorySteps {
 
-    @Given("The client is logged in and on the inventory page")
+    @Given("^The client is logged in and on the inventory page$")
     public void theClientIsLoggedInAndOnTheInventoryPage() {
         SauceDemoLoginService.navigateWeb();
         SauceDemoLoginService.enterUsernameAndPassword("standard_user", "secret_sauce");
         SauceDemoLoginService.clickLogin();
     }
 
-    @When("The client adds the first product Sauce Labs Backpack to the cart")
+    @When("^The client adds the first product Sauce Labs Backpack to the cart$")
     public void theClientAddsTheFirstProductToTheCart() {
         SauceDemoInventoryService.addBackpackToCart();
     }
@@ -25,12 +25,12 @@ public class SauceDemoInventorySteps {
         Assert.assertEquals(actualCount, expectedCount);
     }
 
-    @When("The client removes the same product from the cart")
+    @When("^The client removes the same product from the cart$")
     public void theClientRemovesTheSameProductFromTheCart() {
         SauceDemoInventoryService.removeBackpackFromCart();
     }
 
-    @Then("The cart badge should be 0 or not visible")
+    @Then("^The cart badge should be 0 or not visible$")
     public void theCartBadgeShouldBe0OrNotVisible() {
         boolean isBadgeVisible = SauceDemoInventoryService.isCartBadgeVisible();
         int count = isBadgeVisible ? SauceDemoInventoryService.getCartBadgeCount() : 0;

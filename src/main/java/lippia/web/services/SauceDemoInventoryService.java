@@ -1,9 +1,9 @@
 package lippia.web.services;
 
 import com.crowdar.core.actions.ActionManager;
-import lippia.web.constants.SauceDemoConstants;
+import lippia.web.constants.SauceDemoLoginConstants;
 
-import static lippia.web.constants.SauceDemoConstants.*;
+import static lippia.web.constants.SauceDemoInventoryConstants.*;
 
 public class SauceDemoInventoryService extends ActionManager {
 
@@ -56,7 +56,7 @@ public class SauceDemoInventoryService extends ActionManager {
 
     public static boolean isCartBadgeVisible() {
         try {
-            return isVisible(SauceDemoConstants.CART_BADGE_COUNT);
+            return isVisible(CART_BADGE_COUNT);
         } catch (org.openqa.selenium.NoSuchElementException e) {
             return false;
         }

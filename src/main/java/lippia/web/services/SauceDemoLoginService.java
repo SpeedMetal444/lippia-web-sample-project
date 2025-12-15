@@ -5,7 +5,8 @@ import com.crowdar.core.actions.ActionManager;
 import org.testng.Assert;
 
 import static com.crowdar.core.actions.WebActionManager.navigateTo;
-import static lippia.web.constants.SauceDemoConstants.*;
+import static lippia.web.constants.SauceDemoInventoryConstants.*;
+import static lippia.web.constants.SauceDemoLoginConstants.*;
 
 public class SauceDemoLoginService extends ActionManager {
 

@@ -20,7 +20,7 @@ Feature: Complete Purchase and Validate Checkout Data
     And The user proceeds through the checkout without entering a name
     Then The user can read the "Error: Last Name is required" message
 
-  @OrderFailureEmptyName
+  @OrderFailureEmptyZipCode
   Scenario: Order failure caused by empty name space
     When The user adds two products to the cart
     And The user proceeds through the checkout without entering a zipcode

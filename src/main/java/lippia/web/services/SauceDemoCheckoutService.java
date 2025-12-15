@@ -3,6 +3,7 @@ package lippia.web.services;
 import com.crowdar.core.actions.ActionManager;
 import org.testng.Assert;
 import static lippia.web.constants.SauceDemoCheckoutConstants.*;
+import static lippia.web.constants.SauceDemoLoginConstants.ERROR_MESSAGE;
 
 public class SauceDemoCheckoutService extends ActionManager {
 
@@ -30,6 +31,16 @@ public class SauceDemoCheckoutService extends ActionManager {
 
     public static void finishCheckout() {
         click(FINISH_BUTTON);
+    }
+
+    public static String getCheckoutErrorMessage() {
+        if (isVisible(CHECKOUT_ERROR_MESSAGE)) {
+            return getText(CHECKOUT_ERROR_MESSAGE);
+        }
+        return "";
+    }
+    public static void validateErrorMessage(String expectedMessage) {
+        Assert.assertEquals(getCheckoutErrorMessage(), expectedMessage);
     }
 }
 

@@ -18,7 +18,7 @@ Feature: Complete Purchase and Validate Checkout Data
   Scenario: Order failure caused by empty name space
     When The user adds two products to the cart
     And The user proceeds through the checkout without entering a name
-    Then The user can read the "Error: Last Name is required" message
+    Then The user can read the "Error: First Name is required" message
 
   @OrderFailureEmptyZipCode
   Scenario: Order failure caused by empty name space

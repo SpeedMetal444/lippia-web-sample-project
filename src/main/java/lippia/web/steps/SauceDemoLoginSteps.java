@@ -40,12 +40,11 @@ public class SauceDemoLoginSteps extends PageSteps {
 
     @Then("^The client verify that he logs in correctly$")
     public void theClientVerifyThatHeLogsInCorrectly() {
-        Assert.assertTrue(SauceDemoLoginService.loginSuccess());
+        SauceDemoLoginService.loginSuccess();
     }
 
     @Then("^The client can read an error message$")
     public void theClientCanReadAnErrorMessage() {
-        String expectedMessage = "Epic sadface: Sorry, this user has been locked out.";
-        Assert.assertEquals(SauceDemoLoginService.getErrorMessage(), expectedMessage);
+        SauceDemoLoginService.validateErrorMessage();
     }
 }

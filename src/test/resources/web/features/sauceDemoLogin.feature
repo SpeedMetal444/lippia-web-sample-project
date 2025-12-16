@@ -5,18 +5,18 @@ Feature: Log in to the SauceDemo page
   So that I can use the site
 
   Background:
-    Given The client is on SauceDemo page
+    Given The user is on SauceDemo page
 
   @LoginSuccess
-  Scenario: The client logs in correctly
-    When The client use a correct user
-    And  The client use a correct password
-    And The client clicks on the Login button
-    Then The client verify that he logs in correctly
+  Scenario: The user logs in correctly
+    When The user use a correct user
+    And  The user use a correct password
+    And The user clicks on the Login button
+    Then The user verify that he logs in correctly
 
   @LoginFailure
-  Scenario: The client fails to log in
-    When The client use an incorrect user
-    And The client use a correct password
-    And The client clicks on the Login button
-    Then The client can read an error message
+  Scenario: The user fails to log in
+    When The user use an incorrect user
+    And The user use a correct password
+    And The user clicks on the Login button
+    Then The user can read an error message

@@ -24,12 +24,6 @@ public class SauceDemoCheckoutSteps {
         SauceDemoInventoryService.goToCart();
     }
 
-    @And("^The user proceeds through the checkout steps$")
-    public void theUserProceedsThroughTheCheckoutSteps() {
-        SauceDemoCheckoutService.startCheckout();
-        SauceDemoCheckoutService.fillPersonalInformation("Abel", "Godoy", "3400");
-    }
-
     @Then("^The user verifies that the product names and prices are correct in the overview page$")
     public void theUserVerifiesThatTheProductNamesAndPricesAreCorrectInTheOverviewPage() {
         SauceDemoCheckoutService.verifyProductsAndPrices();
@@ -40,20 +34,14 @@ public class SauceDemoCheckoutSteps {
         SauceDemoCheckoutService.finishCheckout();
     }
 
-    @And("The user proceeds through the checkout without entering a name")
-    public void theUserProceedsThroughTheCheckoutWithoutEnteringAName() {
-        SauceDemoCheckoutService.startCheckout();
-        SauceDemoCheckoutService.fillPersonalInformation("", "Godoy", "3400");
-    }
-
     @Then("The user can read the {string} message")
     public void theUserCanReadTheMessage(String expectedMessage) {
         SauceDemoCheckoutService.validateErrorMessage(expectedMessage);
     }
 
-    @And("The user proceeds through the checkout without entering a zipcode")
-    public void theUserProceedsThroughTheCheckoutWithoutEnteringAZipcode() {
+    @And("The user completes the checkout form with name {string}, last name {string} and zip code {string}")
+    public void theUserCompletesTheCheckoutFormWithNameLastNameAndZipCode(String firstName, String lastName, String zipCode) {
         SauceDemoCheckoutService.startCheckout();
-        SauceDemoCheckoutService.fillPersonalInformation("Abel", "Godoy", "");
+        SauceDemoCheckoutService.fillPersonalInformation(firstName, lastName, zipCode);
     }
 }

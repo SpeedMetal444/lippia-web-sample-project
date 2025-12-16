@@ -5,6 +5,7 @@
       "disable-infobars",
       "--no-sandbox",
       "--disable-dev-shm-usage",
+      "--disable-features=PasswordLeakDetection",
       "--test-type",
       "--ignore-certificate-errors",
       "--start-maximized",

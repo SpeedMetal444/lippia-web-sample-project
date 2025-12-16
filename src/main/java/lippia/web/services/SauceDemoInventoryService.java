@@ -1,7 +1,7 @@
 package lippia.web.services;
 
 import com.crowdar.core.actions.ActionManager;
-import lippia.web.constants.SauceDemoLoginConstants;
+import org.testng.Assert;
 
 import static lippia.web.constants.SauceDemoInventoryConstants.*;
 
@@ -60,6 +60,16 @@ public class SauceDemoInventoryService extends ActionManager {
         } catch (org.openqa.selenium.NoSuchElementException e) {
             return false;
         }
+    }
+    public static void cartBadge0OrNotVisible() {
+        boolean isBadgeVisible = SauceDemoInventoryService.isCartBadgeVisible();
+        int count = isBadgeVisible ? SauceDemoInventoryService.getCartBadgeCount() : 0;
+        Assert.assertEquals(count, 0);
+    }
+
+    public static void cartBadgeCount(int expectedCount) {
+        int actualCount = SauceDemoInventoryService.getCartBadgeCount();
+        Assert.assertEquals(actualCount, expectedCount);
     }
 }
 

@@ -1,10 +1,8 @@
 package lippia.web.steps;
 
 import com.crowdar.core.PageSteps;
-import cucumber.api.PendingException;
 import io.cucumber.java.en.*;
 import lippia.web.services.SauceDemoLoginService;
-import org.testng.Assert;
 
 public class SauceDemoLoginSteps extends PageSteps {
 

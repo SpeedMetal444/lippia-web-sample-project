@@ -1,6 +1,5 @@
 package lippia.web.steps;
 
-import cucumber.api.PendingException;
 import io.cucumber.java.en.*;
 import lippia.web.services.SauceDemoLoginService;
 import lippia.web.services.SauceDemoInventoryService;
@@ -34,12 +33,12 @@ public class SauceDemoCheckoutSteps {
         SauceDemoCheckoutService.finishCheckout();
     }
 
-    @Then("The user can read the {string} message")
+    @Then("^The user can read the {string} message$")
     public void theUserCanReadTheMessage(String expectedMessage) {
         SauceDemoCheckoutService.validateErrorMessage(expectedMessage);
     }
 
-    @And("The user completes the checkout form with name {string}, last name {string} and zip code {string}")
+    @And("^The user completes the checkout form with name {string}, last name {string} and zip code {string}$")
     public void theUserCompletesTheCheckoutFormWithNameLastNameAndZipCode(String firstName, String lastName, String zipCode) {
         SauceDemoCheckoutService.startCheckout();
         SauceDemoCheckoutService.fillPersonalInformation(firstName, lastName, zipCode);

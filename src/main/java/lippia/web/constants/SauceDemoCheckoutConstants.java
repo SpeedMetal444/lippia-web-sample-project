@@ -1,6 +1,7 @@
 package lippia.web.constants;
 
 public class SauceDemoCheckoutConstants {
+
     public static final String INPUT_FIRSTNAME_XPATH = "xpath://input[@id='first-name']";
     public static final String INPUT_LASTNAME_XPATH = "xpath://input[@id='last-name']";
     public static final String INPUT_ZIPCODE_XPATH = "xpath://input[@id='postal-code']";

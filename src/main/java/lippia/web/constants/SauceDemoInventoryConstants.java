@@ -1,6 +1,7 @@
 package lippia.web.constants;
 
 public class SauceDemoInventoryConstants {
+
     public static final String INVENTORY_TITLE = "xpath:/html/body/div[1]/div/div/div[1]/div[2]/span";
     public static final String ADD_BUTTON_BACKPACK = "id:add-to-cart-sauce-labs-backpack";
     public static final String BACKPACK_PRICE = "xpath:/html/body/div[1]/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/div";

@@ -1,6 +1,7 @@
 package lippia.web.constants;
 
 public class SauceDemoLoginConstants {
+
     public static final String INPUT_USER_XPATH = "xpath://input[@id='user-name']";
     public static final String INPUT_PASS_XPATH = "xpath://input[@id='password']";
     public static final String LOGIN_BUTTON = "name:login-button";

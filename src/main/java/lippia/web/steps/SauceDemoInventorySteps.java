@@ -1,6 +1,5 @@
 package lippia.web.steps;
 
-import cucumber.api.PendingException;
 import io.cucumber.java.en.*;
 import lippia.web.services.SauceDemoLoginService;
 import lippia.web.services.SauceDemoInventoryService;
@@ -19,7 +18,7 @@ public class SauceDemoInventorySteps {
         SauceDemoInventoryService.addBackpackToCart();
     }
 
-    @Then("The cart badge should show {int}")
+    @Then("^The cart badge should show {int}$")
     public void theCartBadgeShouldShow(int expectedCount) {
         SauceDemoInventoryService.cartBadgeCount(expectedCount);
     }
@@ -34,12 +33,12 @@ public class SauceDemoInventorySteps {
         SauceDemoInventoryService.cartBadge0OrNotVisible();
     }
 
-    @When("The user adds the product Sauce Labs Bolt T-Shirt to the cart")
+    @When("^The user adds the product Sauce Labs Bolt T-Shirt to the cart$")
     public void theClientAddsTheProductToTheCart() {
         SauceDemoInventoryService.addTshirtToCart();
     }
 
-    @When("The user removes the Sauce Labs Bolt T-Shirt from the cart")
+    @When("^The user removes the Sauce Labs Bolt T-Shirt from the cart$")
     public void theClientRemovesTheSauceLabsBoltTShirtFromTheCart() {
         SauceDemoInventoryService.removeTshirtFromCart();
     }

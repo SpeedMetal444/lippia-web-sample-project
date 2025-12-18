@@ -2,21 +2,21 @@
   "browserName": "chrome",
   "goog:chromeOptions": {
     "args": [
-      "disable-infobars",
+      "--disable-infobars",
       "--no-sandbox",
       "--disable-dev-shm-usage",
-      "--disable-features=PasswordLeakDetection",
       "--test-type",
       "--ignore-certificate-errors",
       "--start-maximized",
-      "--disable-blink-features=AutomationControlled"
+      "--disable-blink-features=AutomationControlled",
+      "--disable-features=PasswordLeakDetection,PasswordManagerOnboarding",
+      "--incognito"
     ],
     "extensions": [],
     "prefs": {
-      "printing.enabled": false,
       "credentials_enable_service": false,
       "profile.password_manager_enabled": false,
-      "profile.password_manager_leak_detection_enabled": false
+      "printing.enabled": false
     }
   },
   "platform": "ANY",

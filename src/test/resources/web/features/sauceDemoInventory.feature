@@ -4,13 +4,13 @@ Feature: Manage items in the cart from the inventory page
   I want to add and remove products from the cart
   So that I can verify the cart badge updates correctly
 
-  @AddAProduct @Smoke @Regression
+  @AddAProduct @Smoke @Regression @TPFinal
   Scenario: Add an item to cart and then verify the cart badge
     Given The user is logged in and on the inventory page
     When The user adds the product Sauce Labs Bolt T-Shirt to the cart
     Then The cart badge should show 1
 
-  @RemoveAProduct @Regression
+  @RemoveAProduct @Regression @TPFinal
   Scenario: Remove an item from the cart and then verify the cart badge
     Given The user is logged in and on the inventory page
     And The user adds the product Sauce Labs Bolt T-Shirt to the cart

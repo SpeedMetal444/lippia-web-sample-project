@@ -33,12 +33,12 @@ public class SauceDemoCheckoutSteps {
         SauceDemoCheckoutService.finishCheckout();
     }
 
-    @Then("^The user can read the (.*) message$")
+    @Then("^The user can read the '(.*)' message$")
     public void theUserCanReadTheMessage(String expectedMessage) {
         SauceDemoCheckoutService.validateErrorMessage(expectedMessage);
     }
 
-    @And("^The user completes the checkout form with name (.*), last name (.*) and zip code (.*)$")
+    @And("^The user completes the checkout form with name '(.*)', last name '(.*)' and zip code '(.*)'$")
     public void theUserCompletesTheCheckoutFormWithNameLastNameAndZipCode(String firstName, String lastName, String zipCode) {
         SauceDemoCheckoutService.startCheckout();
         SauceDemoCheckoutService.fillPersonalInformation(firstName, lastName, zipCode);

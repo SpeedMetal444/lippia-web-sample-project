@@ -10,18 +10,18 @@ Feature: Complete Purchase and Validate Checkout Data
   @OrderSuccess
   Scenario: Successful checkout with product and price validation
     When The user adds two products to the cart
-    And The user completes the checkout form with name "Abel", last name "Godoy" and zip code "3400"
+    And The user completes the checkout form with name 'Abel', last name 'Godoy' and zip code '3400'
     And The user verifies that the product names and prices are correct in the overview page
     Then The user finishes the checkout successfully
 
   @OrderFailureEmptyName
   Scenario: Order failure caused by empty name space
     When The user adds two products to the cart
-    And The user completes the checkout form with name "", last name "Godoy" and zip code "3400"
-    Then The user can read the "Error: First Name is required" message
+    And The user completes the checkout form with name '', last name 'Godoy' and zip code '3400'
+    Then The user can read the 'Error: First Name is required' message
 
   @OrderFailureEmptyZipCode
   Scenario: Order failure caused by empty name space
     When The user adds two products to the cart
-    And The user completes the checkout form with name "Abel", last name "Godoy" and zip code ""
-    Then The user can read the "Error: Postal Code is required" message
+    And The user completes the checkout form with name 'Abel', last name 'Godoy' and zip code ''
+    Then The user can read the 'Error: Postal Code is required' message

@@ -18,7 +18,7 @@ public class SauceDemoInventorySteps {
         SauceDemoInventoryService.addBackpackToCart();
     }
 
-    @Then("^The cart badge should show {int}$")
+    @Then("^The cart badge should show (.*)$")
     public void theCartBadgeShouldShow(int expectedCount) {
         SauceDemoInventoryService.cartBadgeCount(expectedCount);
     }
